@@ -13,6 +13,10 @@ export const addUser = (req,res) => {
     res.send("User Added Successfully");
 }
 
+export const getUser = (req, res) => {
+    res.send(`The user is ${user.userName}. The email is ${user.userEmail}. The password is ${user.userPassword}.`)
+}
+
 export const deleteUser = (req, res) => {
     user = {
         userName: "",
@@ -22,6 +26,3 @@ export const deleteUser = (req, res) => {
     res.send("User deleted.");
 }
 
-export const getUser = (req, res) => {
-    res.send(`The user is ${user.userName}. The email is ${user.userEmail}. The password is ${user.userPassword}.`)
-}

@@ -1,13 +1,13 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import router from "./userRoutes.js";
+import router from "./routes/userRoutes.js";
 
 const app = express();
 const PORT = 4000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(router);
+app.use("/", router);
 
 
 const __filename = fileURLToPath(import.meta.url);
